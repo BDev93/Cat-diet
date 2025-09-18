@@ -1,0 +1,54 @@
+body{
+    background-color: gray;
+}
+header {
+    text-align: center;
+
+}
+.cat-name{
+    display: flex;
+    padding: 0 15px;
+    
+}
+.cat{
+    text-align: center;
+    background-color:brown;
+    width: 300px;
+    padding: 5px 25px;
+    margin: auto auto;
+    
+}
+section {
+    display: flex;
+    padding: 0 15px;
+    
+   
+}
+.conteiner {
+    background-color: aqua;
+    border: 2px solid red;
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    margin: auto auto;
+    padding: 25px 50px;
+    
+}
+.conteiner-btn{
+    display: flex;
+
+}
+.conteiner-add{
+    border: 3px solid red;
+    
+    padding: 0 15px;
+    margin: auto auto;
+
+}
+.add{
+   width: 100px;
+}
+.add-btn {
+    
+    
+}
