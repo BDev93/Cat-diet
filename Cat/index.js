@@ -5,7 +5,14 @@ const newP = document.createElement("p")
 
 
 
-addBtn.addEventListener('click', function(){
-    newP.textContent = "BUM! Rysiek jest grubasek!"
+
+// Dodaj nasłuchiwanie kliknięcia
+addBtn.addEventListener('click', function() {
+    addFood();
+});
+
+function addFood() {
+    const newP = document.createElement("p");
+    newP.textContent = "105g";
     dataOne.append(newP);
-})
+}
