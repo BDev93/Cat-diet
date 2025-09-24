@@ -13,9 +13,10 @@ header {
 .cat{
     text-align: center;
     background-color:brown;
-    width: 300px;
-    padding: 5px 25px;
+    width: 200px;
+    padding: 5px 50px;
     margin: auto auto;
+    border:2px solid bisque;
     
 }
 section {
@@ -25,13 +26,18 @@ section {
    
 }
 .conteiner {
-    background-color: aqua;
-    border: 2px solid red;
+    position: relative;
+    background-color: rgb(31, 129, 129);
+    border: 2px solid bisque;
     height: 300px;
-    width: 300px;
+    width: 200px;
     text-align: center;
     margin: auto auto;
     padding: 25px 50px;
+    
+   
+   
+    
     
 }
 .conteiner-btn{
@@ -39,7 +45,7 @@ section {
 
 }
 .conteiner-add{
-    border: 3px solid red;
+    
     
     padding: 0 15px;
     margin: auto auto;
@@ -47,8 +53,36 @@ section {
 }
 .add{
    width: 100px;
+   margin-top: 15px;
+   border: none;
+   border-radius: 5px;
+   text-align: center;
 }
 .add-btn {
+   border:none;
+   border-radius:5px;
+
     
+}
+
+.add-btn:hover{
+    background-color: rgb(72, 150, 71);
+    cursor: pointer;
+    -webkit-box-shadow: 8px 8px 24px 0px rgba(157, 239, 121, 1);
+    -moz-box-shadow: 8px 8px 24px 0px rgba(157, 239, 121, 1);
+    box-shadow: 8px 8px 24px 0px rgba(157, 239, 121, 1);
+}
+.sum-tab{
+    color: blue;
+    position: absolute;
+    bottom: 15px; /* odstęp od dołu */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin:0;
+    
+}
+.data{
+    color: whitesmoke;
     
 }
