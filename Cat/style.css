@@ -58,6 +58,11 @@ section {
    border-radius: 5px;
    text-align: center;
 }
+.add:focus{
+    background-color: aquamarine;
+    outline: none;
+
+}
 .add-btn {
    border:none;
    border-radius:5px;
@@ -66,11 +71,11 @@ section {
 }
 
 .add-btn:hover{
-    background-color: rgb(72, 150, 71);
+    background-color: aquamarine;
     cursor: pointer;
-    -webkit-box-shadow: 8px 8px 24px 0px rgba(157, 239, 121, 1);
-    -moz-box-shadow: 8px 8px 24px 0px rgba(157, 239, 121, 1);
-    box-shadow: 8px 8px 24px 0px rgba(157, 239, 121, 1);
+    -webkit-box-shadow: 8px 8px 24px 0px aquamarine;
+    -moz-box-shadow: 8px 8px 24px 0px aquamarine;
+    box-shadow: 8px 8px 24px 0px aquamarine;
 }
 .sum-tab{
     color: blue;
