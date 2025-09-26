@@ -40,12 +40,13 @@ function addFood() {
 
     function renderCat(){
         dataOne.innerHTML = ""
+        document.getElementById("cat-name").textContent = cats[currentCat].name;
         cats[currentCat].data.forEach(val =>{
             const p = document.createElement("p")
             p.className = "data"
             p.textContent = val + "g"
             dataOne.appendChild(p)
-            document.getElementById("cat-name").textContent = cats[currentCat].name;
+            
         })
 
         const sumP = document.createElement("p")
@@ -59,17 +60,28 @@ function addFood() {
 
         tabs.innerHTML = ""
 
+        const innerDiv = document.createElement("div");
+        innerDiv.className = "cat-tabs-inner";
+
         cats.forEach((cat, idx) =>{
             const btn = document.createElement("button");
             btn.textContent = cat.name;
+            btn.className = "cat-btn"
+            if (idx === currentCat) {
+                btn.classList.add("active-cat-btn")
+            }       
             btn.onclick = () => switchCat(idx);
-            tabs.appendChild(btn);
+            innerDiv.appendChild(btn);
+            
         })
 
         const addBtn = document.createElement("button")
         addBtn.textContent = "+"
+        addBtn.className = "add-cat-btn"
         addBtn.onclick = addCat;
-        tabs.appendChild(addBtn);
+        innerDiv.appendChild(addBtn);
+
+        tabs.appendChild(innerDiv);
 
     };
 
@@ -84,6 +96,7 @@ function addFood() {
 
     function switchCat(idx){
         currentCat = idx;
+        renderTabs();
         renderCat()
     }
 
