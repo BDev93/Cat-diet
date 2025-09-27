@@ -12,11 +12,13 @@ header {
 }
 .cat{
     text-align: center;
-    background-color:brown;
+    color:whitesmoke;
+    background-color:rgb(31, 129, 129);
     width: 200px;
     padding: 5px 50px;
     margin: auto auto;
-    border:2px solid bisque;
+    border-radius: 15px;
+    
     
 }
 section {
@@ -28,12 +30,13 @@ section {
 .conteiner {
     position: relative;
     background-color: rgb(31, 129, 129);
-    border: 2px solid bisque;
+    border-radius: 15px;
     height: 300px;
     width: 200px;
     text-align: center;
-    margin: auto auto;
+    margin: 5px auto;
     padding: 25px 50px;
+    
     
    
    
@@ -53,7 +56,7 @@ section {
 }
 .add{
    width: 100px;
-   margin-top: 15px;
+   margin-top: 5px;
    border: none;
    border-radius: 5px;
    text-align: center;
@@ -78,7 +81,7 @@ section {
     box-shadow: 8px 8px 24px 0px aquamarine;
 }
 .sum-tab{
-    color: blue;
+    color: rgb(151, 225, 55);
     position: absolute;
     bottom: 15px; /* odstęp od dołu */
     left: 0;
