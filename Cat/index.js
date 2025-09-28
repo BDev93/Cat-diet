@@ -1,6 +1,6 @@
 
 const addBtn = document.getElementById("add-btn");
-
+const clearBtn = document.getElementById("clear-btn")
 
 const dataOne = document.getElementById("data-one")
 
@@ -35,12 +35,17 @@ function addFood() {
         
     } 
 }
+    
 
+      
+    
 
 
     function renderCat(){
         dataOne.innerHTML = ""
-        document.getElementById("cat-name").textContent = cats[currentCat].name;
+
+       
+        
         cats[currentCat].data.forEach(val =>{
             const p = document.createElement("p")
             p.className = "data"
