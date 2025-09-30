@@ -27,10 +27,21 @@
             <input type="text" class="add" id="add" autocomplete="off">
             <button class="add-btn" id="add-btn">Dodaj</button>
             
-        </div>
-
-      
+        </div>      
     </div>
+    <div id="modalOverlay" class="hidden">
+        <div class="modal">
+            <h2 id="modal-title">Podaj imię kota</h2>
+            <input id="cat-name-input" type="text" maxlength="20" autocolete="off"/>
+            <p class="error"></p>
+            <div class="modal-actions">
+                <button id="modal-ok">OK</button>
+                <button id="modal-cancel">Anuluj</button>
+
+            </div>
+        </div>
+    </div>
+
   <script src="index.js"></script>    
 </body>
 </html>
