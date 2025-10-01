@@ -1,13 +1,18 @@
 
 const addBtn = document.getElementById("add-btn");
 const clearBtn = document.getElementById("clear-btn")
-
 const dataOne = document.getElementById("data-one")
 
-
 const addData = document.getElementById("add")
-
 const tabs = document.getElementById("cat-tabs")
+
+const modalOverlay = document.getElementById("modalOverlay")
+const modalInput = document.getElementById("cat-name-input")
+const modalOk = document.getElementById("modal-ok")
+const modalCancel = document.getElementById("modal-cancel")
+const modalError = document.querySelector(".error")
+
+let lastFocusedElement = null;
 
 
 const cats = [
@@ -91,7 +96,8 @@ function addFood() {
     };
 
     function addCat() {
-        const name = prompt("Podaj imię kota:")
+        openModal()
+        //const name = prompt("Podaj imię kota:")
         if(name){
             cats.push({name, data: [], sum: 0})
             renderTabs()
@@ -104,6 +110,21 @@ function addFood() {
         renderTabs();
         renderCat()
     }
+
+    //Modal function
+
+   function openModal(){
+    lastFocusedElement = document.activeElement;
+    modalOverlay.classList.add("open");
+    modalInput.value = ""
+    modalError.textContent = ""
+    modalInput.focus()
+
+    document.body.style.overflow = "hidden";
+
+
+   } 
+
 
     renderTabs();
     renderCat();
