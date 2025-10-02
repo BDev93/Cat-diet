@@ -125,6 +125,32 @@ function addFood() {
 
    } 
 
+   function closeModal(){
+    modalOverlay.classList.remove("open")
+    document.body.style.overflow = ""
+
+   }
+
+   // OK and Cancel button operation
+   modalOk.addEventListener('click', function() {
+    const name = modalInput.value.trim()
+
+    if(name === ""){
+        modalError.textContent = "Imie kota nie może być puste"
+        modalInput.focus()
+        return
+    }
+    // This feature is not yet available.
+    addCatWithName(name)
+
+    closeModal()
+
+   })
+
+   modalCancel.addEventListener("click", function() {
+    closeModal()
+   })
+
 
     renderTabs();
     renderCat();
