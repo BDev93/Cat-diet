@@ -97,7 +97,7 @@ function addFood() {
 
     function addCat() {
         openModal()
-        //const name = prompt("Podaj imię kota:")
+        
         if(name){
             cats.push({name, data: [], sum: 0})
             renderTabs()
@@ -128,8 +128,22 @@ function addFood() {
    function closeModal(){
     modalOverlay.classList.remove("open")
     document.body.style.overflow = ""
+    }
+    //Keyboard operation
 
-   }
+    document.addEventListener("keydown", function(event){
+        if(!modalOverlay.classList.contains("open")){
+            return;
+        }
+        if(event.key === "Enter"){
+            modalOk.click()
+        }
+        if(event.key === "Escape"){
+            closeModal()
+        }
+    })
+
+   
 
    // OK and Cancel button operation
    modalOk.addEventListener('click', function() {
@@ -140,12 +154,23 @@ function addFood() {
         modalInput.focus()
         return
     }
-    // This feature is not yet available.
+
+    function addCatWithName(name){
+        cats.push({name: name, data: [], sum: 0})
+        renderTabs()
+        switchCat(cats.length - 1)
+    }
+    
+
+
+
     addCatWithName(name)
 
     closeModal()
 
    })
+
+
 
    modalCancel.addEventListener("click", function() {
     closeModal()

@@ -1,29 +1,35 @@
 body{
     background-color: gray;
     padding: 0;
+    margin: 0;
+    height: 100%;
+    
 }
 header {
     margin: auto auto;
     display: flex;
     align-items: center;
     width:300px;
-    height: 120px;
+    height: 100px;
+    justify-content: space-between;
+
     
               
     
 }  
 
 h1{
- margin-top: 55px;
+ /* margin-top: 55px; */
  margin-left: 35px;
  font-family: "Pacifico", cursive;
  font-weight: 400;
 font-style: normal;
+
    
 }
 
 img{
-    margin-top: 25px;
+    /* margin-top: 25px; */
     margin-left: 35px;    
     height:100px;
     width: 100px;
@@ -142,7 +148,7 @@ section {
     margin-left: 8px;
     border: none;
     cursor: pointer;
-    margin-bottom: 5px;
+    
     
 }
 
@@ -157,7 +163,7 @@ section {
     margin-left: 8px;
     border: none;
     cursor: pointer;
-    margin-bottom: 5px;
+   
 
 }
 .add-cat-btn:hover, .cat-btn:hover{
