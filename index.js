@@ -150,7 +150,7 @@ function addFood() {
     const name = modalInput.value.trim()
 
     if(name === ""){
-        modalError.textContent = "Imie kota nie może być puste"
+        showError("Imie kota nie może być puste")
         modalInput.focus()
         return
     }
@@ -160,12 +160,26 @@ function addFood() {
         renderTabs()
         switchCat(cats.length - 1)
     }
+
+    // Displaying an error  in the h2 element
+
+    function showError(message){
+        const title = document.getElementById("modal-title")
+        title.textContent = message
+        title.classList.add("error")
+    }
+    function showTitle() {
+        const title = document.getElementById("modal-title")
+        title.textContent = "Podaj imię kota"
+        title.classList.remove("error")
+    }
     
 
 
 
     addCatWithName(name)
-
+    
+    showTitle()
     closeModal()
 
    })
