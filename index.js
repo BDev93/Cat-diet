@@ -33,8 +33,13 @@ function addFood() {
     const value = addData.value;
     const numberOne = Number(value);
     if(!isNaN(numberOne)){
+        
+        const now = new Date()
+        const hours = now.getHours().toString().padStart(2, "0")
+        const minutes = now.getMinutes().toString().padStart(2, "0")
+        const time = `${hours}:${minutes}`
 
-        cats[currentCat].data.push(numberOne);
+        cats[currentCat].data.push({grams: numberOne, time: time});
         cats[currentCat].sum = cats[currentCat].data.reduce((a,b) => a + b, 0)
         renderCat();
         
@@ -51,10 +56,10 @@ function addFood() {
 
        
         
-        cats[currentCat].data.forEach(val =>{
+        cats[currentCat].data.forEach(entry =>{
             const p = document.createElement("p")
             p.className = "data"
-            p.textContent = val + "g"
+            p.innerHTML = `${entry.grams} g <span class="time">— ${entry.time}</span>`
             dataOne.appendChild(p)
             
         })
