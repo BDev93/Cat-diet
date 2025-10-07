@@ -40,7 +40,7 @@ function addFood() {
         const time = `${hours}:${minutes}`
 
         cats[currentCat].data.push({grams: numberOne, time: time});
-        cats[currentCat].sum = cats[currentCat].data.reduce((a,b) => a + b, 0)
+        cats[currentCat].sum = cats[currentCat].data.reduce((sum, entry) => sum + entry.grams, 0)
         renderCat();
         
     } 
@@ -59,7 +59,7 @@ function addFood() {
         cats[currentCat].data.forEach(entry =>{
             const p = document.createElement("p")
             p.className = "data"
-            p.innerHTML = `${entry.grams} g <span class="time">— ${entry.time}</span>`
+            p.innerHTML = `${entry.grams} g <span class="time"> ${entry.time}</span>`
             dataOne.appendChild(p)
             
         })
@@ -67,7 +67,15 @@ function addFood() {
         const sumP = document.createElement("p")
         sumP.id = "sum-tab"
         sumP.className = "sum-tab"
-        sumP.textContent = "Razem: " + cats[currentCat].sum + "g"
+        const lastEntry = cats[currentCat].data[cats[currentCat].data.length - 1];
+        const lastTime = lastEntry ? lastEntry.time : null;
+        
+        if(lastTime){
+            sumP.innerHTML = `Suma: ${cats[currentCat].sum}g<br><span class="last-time">Ostatnie karmienie o ${lastTime}</span>`
+        } else {
+            sumP.textContent = `Suma: ${cats[currentCat].sum}g`
+        }
+        
         dataOne.appendChild(sumP)
     }
 
