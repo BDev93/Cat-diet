@@ -53,11 +53,11 @@ section {
     width: 200px;
     text-align: center;
     background-image: url(cat3.png);
-    background-position: center bottom;
+    background-position: center 142px;
     background-size: 100px 120px;
     background-repeat: no-repeat;
-    margin: 5px auto;
-    padding: 25px 50px; 
+    margin: 15px auto;
+    padding: 15px 50px; 
 }
 .conteiner-btn{
     display: flex;
@@ -110,11 +110,12 @@ section {
     font-style: normal;
     color: rgb(151, 225, 55);
     position: absolute;
-    bottom: 15px; /* odstęp od dołu */
+    bottom: 5px; /* odstęp od dołu */
     left: 0;
     width: 100%;
     text-align: center;
     margin:0;
+    padding: 0;
     border-top: 2px solid rgb(151, 225, 55);
     
 }
